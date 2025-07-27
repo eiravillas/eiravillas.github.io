@@ -6,19 +6,84 @@
   <title>EIRA Villas</title>
   <style>
     body { margin:0; font-family: serif; color:#333; background:#f9f6f1; }
-    header { position: relative; text-align:center; color:#fff; }
+    header { 
+      position: relative; 
+      text-align:center; 
+      color:#fff; 
+      background: linear-gradient(135deg, #a17649, #8b6a42);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     header img { width:100%; height:auto; display:block; filter: brightness(0.7); }
-    header .overlay { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); padding:1rem; }
-    header h1 { margin:0; font-size:2.5rem; line-height:1.2; }
-    header p { font-size:1.1rem; margin:1rem 0; }
-    .btn { display:inline-block; padding:0.8rem 1.6rem; margin:0.5rem; border:none; font-size:1rem; cursor:pointer; text-decoration:none; }
-    .btn-white { background:#fff; color:#333; }
-    .btn-gold { background:#a17649; color:#fff; }
+    header .overlay { 
+      position: relative;
+      padding: 2rem; 
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header h1 { 
+      margin:0; 
+      font-size:2.8rem; 
+      line-height:1.2; 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-weight: bold;
+    }
+    header p { 
+      font-size:1.3rem; 
+      margin:1.5rem 0; 
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      opacity: 0.95;
+    }
+    .btn { 
+      display:inline-block; 
+      padding:1rem 2rem; 
+      margin:0.5rem; 
+      border:none; 
+      font-size:1.1rem; 
+      cursor:pointer; 
+      text-decoration:none; 
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-white { 
+      background:#fff; 
+      color:#333; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .btn-white:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    .btn-gold { 
+      background:#a17649; 
+      color:#fff; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .btn-gold:hover {
+      background: #8b6a42;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
     section { padding:2rem; max-width:800px; margin:0 auto; }
     .features, .steps { display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-around; }
     .card { flex:1 1 150px; background:#fff; padding:1rem; border-radius:8px; text-align:center; }
     h2 { text-align:center; margin-bottom:1.5rem; font-size:2rem; }
-    @media(max-width:600px){ header h1{font-size:1.8rem;} .features, .steps{flex-direction:column;} }
+    @media(max-width:600px){ 
+      header h1{font-size:2rem;} 
+      header p{font-size:1.1rem;}
+      header .overlay{padding:1.5rem; margin:0 1rem;}
+      .btn{font-size:1rem; padding:0.8rem 1.5rem;}
+      .features, .steps{flex-direction:column;} 
+    }
   </style>
 </head>
 <body>

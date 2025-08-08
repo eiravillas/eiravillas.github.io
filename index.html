@@ -1,143 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>EIRA Villas</title>
-  <style>
-    body { margin:0; font-family: serif; color:#333; background:#f9f6f1; }
-    header { 
-      position: relative; 
-      text-align:center; 
-      color:#fff; 
-      background: linear-gradient(135deg, #a17649, #8b6a42);
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eira Villas</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f6f3ee;
+        color: #333;
     }
-    header img { width:100%; height:auto; display:block; filter: brightness(0.7); }
-    header .overlay { 
-      position: relative;
-      padding: 2rem; 
-      background: rgba(0,0,0,0.3);
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
-      max-width: 800px;
-      margin: 0 auto;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: white;
     }
-    header h1 { 
-      margin:0; 
-      font-size:2.8rem; 
-      line-height:1.2; 
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-      font-weight: bold;
+
+    header h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
     }
-    header p { 
-      font-size:1.3rem; 
-      margin:1.5rem 0; 
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-      opacity: 0.95;
+
+    nav {
+        font-size: 1.5rem;
+        cursor: pointer;
     }
-    .btn { 
-      display:inline-block; 
-      padding:1rem 2rem; 
-      margin:0.5rem; 
-      border:none; 
-      font-size:1.1rem; 
-      cursor:pointer; 
-      text-decoration:none; 
-      border-radius: 5px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+
+    .hero {
+        position: relative;
+        background: url('villa-hero.jpg') center/cover no-repeat;
+        height: 300px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
     }
-    .btn-white { 
-      background:#fff; 
-      color:#333; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    .hero h2 {
+        font-size: 1.6rem;
+        max-width: 400px;
     }
-    .btn-white:hover {
-      background: #f0f0f0;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+
+    .hero p {
+        margin-top: 10px;
+        font-size: 1rem;
     }
-    .btn-gold { 
-      background:#a17649; 
-      color:#fff; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    .hero-buttons {
+        margin-top: 15px;
     }
-    .btn-gold:hover {
-      background: #8b6a42;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+
+    .hero-buttons button {
+        padding: 10px 20px;
+        border: none;
+        font-size: 1rem;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
     }
-    section { padding:2rem; max-width:800px; margin:0 auto; }
-    .features, .steps { display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-around; }
-    .card { flex:1 1 150px; background:#fff; padding:1rem; border-radius:8px; text-align:center; }
-    h2 { text-align:center; margin-bottom:1.5rem; font-size:2rem; }
-    @media(max-width:600px){ 
-      header h1{font-size:2rem;} 
-      header p{font-size:1.1rem;}
-      header .overlay{padding:1.5rem; margin:0 1rem;}
-      .btn{font-size:1rem; padding:0.8rem 1.5rem;}
-      .features, .steps{flex-direction:column;} 
+
+    .btn-primary {
+        background: white;
+        color: black;
     }
-  </style>
+
+    .btn-secondary {
+        background: #a0763b;
+        color: white;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #777;
+        background: white;
+        text-align: center;
+    }
+</style>
 </head>
 <body>
 
 <header>
-  <div class="overlay">
-    <h1>Invest in Udaipur’s First Bali‑Style Private Pool Villas</h1>
-    <p>Earn 7% Assured Rental Income with a Tangible, Branded Asset</p>
-    <a href="#" class="btn btn-white">Download Deck</a>
-    <a href="#" class="btn btn-gold">Schedule Call</a>
-  </div>
+    <h1>EIRA VILLAS</h1>
+    <nav>☰</nav>
 </header>
 
-<section>
-  <h2>Villa Features</h2>
-  <div class="features">
-    <div class="card">Fully‑titled ownership<br>Hassle‑free rental income</div>
-    <div class="card">Private Pool</div>
-    <div class="card">Thematic Interiors</div>
-    <div class="card">Tropical Garden</div>
-  </div>
+<section class="hero">
+    <h2>Invest in Udaipur's First Bali-Style Private Pool Villas</h2>
+    <p>Earn 7% Assured Rental Income with a Tangible, Branded Asset</p>
+    <div class="hero-buttons">
+        <button class="btn-primary">Download Deck</button>
+        <button class="btn-secondary">Schedule Call</button>
+    </div>
 </section>
 
-<section>
-  <h2>Ownership & Returns</h2>
-  <div class="features">
-    <div class="card">7 LO Layout</div>
-    <div class="card">Private Pool</div>
-    <div class="card">Termed Stay</div>
-    <div class="card">55 L/year Rental</div>
-  </div>
+<section class="section">
+    <h3>Villa Features</h3>
+    <div class="features-grid">
+        <div class="feature-card">Fully-titled Ownership</div>
+        <div class="feature-card">18 Ink Layout</div>
+        <div class="feature-card">Private Pool</div>
+        <div class="feature-card">Thematic Interiors</div>
+        <div class="feature-card">Tropical Garden</div>
+    </div>
 </section>
 
-<section>
-  <h2>Why Udaipur</h2>
-  <ul>
-    <li>3.5M tourists annually</li>
-    <li>Fastest growing Airbnb market in the region</li>
-    <li>Close to Sajjangarh Fort & Shilpgram</li>
-  </ul>
+<section class="section">
+    <h3>Ownership & Returns</h3>
+    <div class="features-grid">
+        <div class="feature-card">710L Layout</div>
+        <div class="feature-card">Private Pool</div>
+        <div class="feature-card">Termal Stay</div>
+        <div class="feature-card">55L/year Rental</div>
+    </div>
 </section>
 
-<section>
-  <h2>Next Steps</h2>
-  <div class="steps">
-    <div class="card">Book call</div>
-    <div class="card">Sign MOU</div>
-    <div class="card">Pay token & reserve</div>
-    <div class="card">Construction</div>
-  </div>
+<section class="section">
+    <h3>Why Eira Villas</h3>
+    <ul>
+        <li>6 Designer Villas</li>
+        <li>Private Plunge Pools</li>
+        <li>Managed & Airbnb Ready</li>
+        <li>7% Assured Return + 5% Like</li>
+    </ul>
 </section>
 
-<footer style="text-align:center; padding:2rem 0; font-size:0.9rem; color:#777;">
-  © 2025 EIRA Villas
+<section class="section">
+    <h3>Why Udaipur</h3>
+    <ul>
+        <li>3.5M+ Tourists Annually</li>
+        <li>Fastest Growing Airbnb Market</li>
+        <li>Close to Sajjangarh Fort & Shilpgram</li>
+    </ul>
+</section>
+
+<section class="section">
+    <h3>Next Steps</h3>
+    <ul>
+        <li>Book Call</li>
+        <li>Sign MOU</li>
+        <li>Pay-Token & Reserve</li>
+        <li>Construction</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© Eira Villas | +660-6338-4204 | ena@eiravillas.com</p>
 </footer>
 
 </body>
